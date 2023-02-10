@@ -5,6 +5,7 @@ final class LoadingView: UIView {
     private lazy var activityIndicatorView: UIActivityIndicatorView = {
       
         let view = UIActivityIndicatorView(style: .large)
+        view.play()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -30,7 +31,6 @@ final class LoadingView: UIView {
     func configureConstraints() {
         
         NSLayoutConstraint.activate([
-        
             activityIndicatorView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             activityIndicatorView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
