@@ -27,14 +27,14 @@ final class ListViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
 
+        loadingView.startAnimating()
+
         service.fetchList() { repositories in
-
             DispatchQueue.main.async {
-
+                self.loadingView.stopAnimating()
                 self.listView.updateView(with: repositories)
             }
         }
-
     }
 
     override func loadView() {

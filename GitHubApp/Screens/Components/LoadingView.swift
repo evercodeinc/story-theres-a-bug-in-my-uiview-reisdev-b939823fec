@@ -25,7 +25,6 @@ final class LoadingView: UIView {
       
         let view = UIActivityIndicatorView(style: .large)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.startAnimating()
         return view
     }()
     
@@ -56,5 +55,13 @@ final class LoadingView: UIView {
             stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
+    }
+
+    func startAnimating() {
+        activityIndicatorView.startAnimating()
+    }
+
+    func stopAnimating() {
+        activityIndicatorView.stopAnimating()
     }
 }
