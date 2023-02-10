@@ -5,6 +5,7 @@ final class LoadingView: UIView {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
         stackView.axis = .vertical
         stackView.spacing = 16.0
         return stackView
@@ -16,6 +17,7 @@ final class LoadingView: UIView {
         label.font = .systemFont(ofSize: 21.0, weight: .semibold)
         label.textAlignment = .center
         label.text = "Loading..."
+        label.textColor = .black
         return label
     }()
 
