@@ -23,7 +23,7 @@ final class LoadingView: UIView {
       
         let view = UIActivityIndicatorView(style: .large)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.play()
+        view.startAnimating()
         return view
     }()
     
